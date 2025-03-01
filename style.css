@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.player-1 { background-color: #d1e7ff; }
+.player-2 { background-color: #b0d4ff; }
+
+.box {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 { margin: 0; }
+h3 { margin: 10px 0; }
+
+.current-score { color: #777; }
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+    width: 200px;
+}
+
+.start-game{
+    margin-bottom: 100px !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.middle div {
+    margin: 10px 0;
+    padding: 10px;
+    background: #eeeeee;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dice-img {
+    width: 50px;
+    height: 100px;
+    background: url(./image/1.jpg) no-repeat center !important;
+    background-size: cover;
+}
