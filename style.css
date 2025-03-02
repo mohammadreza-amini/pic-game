@@ -97,7 +97,9 @@ bottom: 55px;
 width: 140px !important;
 }
 
-
+.player-winner{
+    background-color: rgb(211, 44, 44);
+}
 
 .hidden {
     display: none !important;
