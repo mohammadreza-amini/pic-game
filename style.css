@@ -26,7 +26,8 @@ body {
 }
 
 .player-1 { background-color: #d1e7ff; }
-.player-2 { background-color: #b0d4ff; }
+.player-2 { background-color: #d1e7ff; }
+.player-active { background-color: #91c2ff; }
 
 .box {
     background: white;

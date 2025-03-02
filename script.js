@@ -6,6 +6,7 @@ const playerTwo = document.getElementById('score--1');
 const currentScorePlayerOne = document.querySelector('#current--0');
 const currentScorePlayertwo = document.querySelector("#current--1");
 let currentScore = 0;
+let activePlayer = 0;
 
 rollButton.addEventListener('click', () => {
     const dice = Math.floor(Math.random() * 6) + 1; 
@@ -15,9 +16,12 @@ rollButton.addEventListener('click', () => {
 
     if (dice !== 1) {
         currentScore += dice;
-        currentScorePlayerOne.innerHTML = currentScore;
+        document.querySelector(`#current--${activePlayer}`).innerHTML = currentScore;
     } else {
         currentScore = 0;
-        currentScorePlayerOne.innerHTML = 0;
+        document.querySelector(`#current--${activePlayer}`).innerHTML = 0;
+        activePlayer = activePlayer === 0 ? 1 : 0;
+        document.getElementsByClassName('player-1')[0].classList.toggle('player-active');
+        document.getElementsByClassName('player-2')[0].classList.toggle('player-active');
     }
 });
