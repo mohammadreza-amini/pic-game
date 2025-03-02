@@ -44,16 +44,20 @@ h3 { margin: 10px 0; }
 .current-score { color: #777; }
 
 .middle {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
+    background: #5ada64;
     padding: 20px;
     width: 200px;
 }
 
 .start-game{
+    position: absolute;
+    width: 190px !important;
+    top: 15px !important;
     margin-bottom: 100px !important;
     font-weight: bold;
     font-size: 18px;
@@ -65,7 +69,8 @@ h3 { margin: 10px 0; }
     padding: 10px;
     background: #eeeeee;
     text-align: center;
-    width: 100%;
+    width: 100%; 
+    border: #777 solid 2px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -73,6 +78,26 @@ h3 { margin: 10px 0; }
 .dice-img {
     width: 50px;
     height: 100px;
-    background: url(./image/1.jpg) no-repeat center !important;
+    background: no-repeat center !important;
     background-size: cover;
+    cursor:context-menu !important;
+    border: none !important;
+}
+
+.roll{
+    position:absolute;
+    bottom: 135px;
+    width: 170px !important;
+}
+
+.hold{
+position: absolute;
+bottom: 55px;
+width: 140px !important;
+}
+
+
+
+.hidden {
+    display: none !important;
 }
