@@ -1,8 +1,8 @@
 const diceContainer = document.querySelector('.dice-img'); 
 const diceElement = diceContainer.querySelector('img'); 
 const rollButton = document.querySelector('.roll'); 
-const playerOne = document.getElementById('score--0');
-const playerTwo = document.getElementById('score--1');
+const scorePlayerOne = document.getElementById('score--0');
+const scorePlayerTwo = document.getElementById('score--1');
 const currentScorePlayerOne = document.querySelector('#current--0');
 const currentScorePlayertwo = document.querySelector("#current--1");
 
@@ -53,4 +53,24 @@ document.getElementsByClassName('hold')[0].addEventListener('click', () => {
 
         playerSwitch();
     }
+});
+
+
+
+
+
+// reset game
+
+document.getElementsByClassName('start-game')[0].addEventListener('click', () => {
+    scores = [0, 0];
+    scorePlayerOne.innerHTML = 0;
+    scorePlayerTwo.innerHTML = 0;
+    currentScorePlayerOne.innerHTML = 0;
+    currentScorePlayertwo.innerHTML = 0;
+    document.getElementsByClassName(`player--0`)[0].classList.remove('player-winner');
+    document.getElementsByClassName(`player--0`)[0].classList.add('player-active');
+    document.getElementsByClassName(`player--1`)[0].classList.remove('player-winner');
+    document.getElementsByClassName(`player--1`)[0].classList.remove("player-active");
+    activePlayer = 0;
+    isPlaying = true;
 });
